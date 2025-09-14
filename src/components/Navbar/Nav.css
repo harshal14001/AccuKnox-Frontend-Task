@@ -33,6 +33,10 @@
   display: flex;
   justify-content: center;
 }
+.navbar-center input{
+  background-color:rgb(230, 238, 239);
+
+}
 
 .navbar-right {
   flex: 1;

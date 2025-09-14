@@ -4,7 +4,8 @@
   align-items: center;
   padding: 25px 20px;
   height: 60px;
-  border: 1px solid;
+  background-color:rgb(230, 238, 239);
+  /* border: 1px solid; */
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-sizing: border-box;
