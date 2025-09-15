@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Cloud Accounts",
+    "type": "pie",
+    "data": [
+      { "name": "Connected", "value": 2 },
+      { "name": "Not Connected", "value": 2 }
+    ],
+    "colors": ["#4F46E5", "#E5E7EB"]
+  },
+  {
+    "title": "Cloud Account Risk Assessment",
+    "type": "pie",
+    "data": [
+      { "name": "Failed", "value": 1689 },
+      { "name": "Warning", "value": 681 },
+      { "name": "Not available", "value": 36 },
+      { "name": "Passed", "value": 7253 }
+    ],
+    "colors": ["#EF4444", "#FACC15", "#9CA3AF", "#22C55E"]
+  }
+]

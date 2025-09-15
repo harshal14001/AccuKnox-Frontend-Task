@@ -1,14 +1,185 @@
-.opdb-main{
-   background-color: rgb(230, 238, 239);
-   padding: 10px 30px 10px 30px; /* T R B L*/
-   border: 1px solid; /* */
+/* container */
+.opdb-main {
+  background: #f3f9fc;
+  padding: 20px 28px;
 }
 
-.cspm{
-   font-size: 15px;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   font-weight: 700;
-
+/* CNAPP EXE */
+.opdb-main h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: larger;
+  margin-bottom: 20px;
 }
 
+/* heading */
+.cspm {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-left: 10px;
+  margin-bottom: 14px;
+  font-family: 'Inter', sans-serif;
+}
 
+/* grid layout - responsive cards */
+.widget-grid {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 widgets per row */
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .widget-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 700px) {
+  .widget-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+/* card */
+.widget {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 215px;
+  box-shadow: 0 4px 18px rgba(16,24,40,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* title */
+.widget-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b1220;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* placeholder text */
+.widget-placeholder {
+  color: #6b7280;
+  text-align: center;
+  padding: 28px 0;
+}
+
+/* main content area (text vs charts) */
+.widget-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* chart row - chart + legend */
+.chart-row {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* chart area with center overlay */
+.chart-area {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex: 0 0 140px;
+}
+
+/* center text inside donut */
+.chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.chart-total {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0b1220;
+}
+.chart-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* legend */
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Add widget card style */
+.add-widget {
+  border: 1px dashed #d1d5db;
+  background: #fbfdff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+/**/
+/* CWPP */
+.cwpp {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* CWPP cards (reuse widget style) */
+.cwpp-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 215px;
+  box-shadow: 0 4px 18px rgba(16,24,40,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cwpp-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b1220;
+  margin-bottom: 12px;
+}
+
+.cwpp-text {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+}
+.cwpp-span{
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+}
