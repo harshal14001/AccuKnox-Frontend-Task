@@ -1,22 +1,68 @@
-[
-  {
-    "title": "Cloud Accounts",
-    "type": "pie",
-    "data": [
-      { "name": "Connected", "value": 2 },
-      { "name": "Not Connected", "value": 2 }
-    ],
-    "colors": ["#4F46E5", "#E5E7EB"]
-  },
-  {
-    "title": "Cloud Account Risk Assessment",
-    "type": "pie",
-    "data": [
-      { "name": "Failed", "value": 1689 },
-      { "name": "Warning", "value": 681 },
-      { "name": "Not available", "value": 36 },
-      { "name": "Passed", "value": 7253 }
-    ],
-    "colors": ["#EF4444", "#FACC15", "#9CA3AF", "#22C55E"]
-  }
-]
+{
+  "CSPM Executive Dashboard": [
+    {
+      "id": "cspm-1",
+      "title": "Cloud Accounts",
+      "type": "pie",
+      "data": [
+        { "name": "Connected", "value": 2 },
+        { "name": "Not Connected", "value": 2 }
+      ],
+      "colors": ["#4F46E5", "#E5E7EB"]
+    },
+    {
+      "id": "cspm-2",
+      "title": "Cloud Account Risk Assessment",
+      "type": "pie",
+      "data": [
+        { "name": "Failed", "value": 1689 },
+        { "name": "Warning", "value": 681 },
+        { "name": "Not available", "value": 36 },
+        { "name": "Passed", "value": 7253 }
+      ],
+      "colors": ["#EF4444", "#FACC15", "#9CA3AF", "#22C55E"]
+    }
+  ],
+  "CWPP Dashboard": [
+    {
+      "id": "cwpp-1",
+      "title": "Top 5 Namespace Specific Alerts",
+      "type": "text",
+      "text": "No Graph data available"
+    },
+    {
+      "id": "cwpp-2",
+      "title": "Workload Alerts",
+      "type": "text",
+      "text": "No Graph data available"
+    },
+    {
+      "id": "cwpp-3",
+      "title": "About Developer",
+      "type": "text",
+      "text": "Hello! folks myself Harshal Argade and I am Full Stack Web Developer. Contact: harshalargade.dev@gmail.com"
+    },
+    {
+      "id": "cwpp-4",
+      "title": "Tech Stack",
+      "type": "text",
+      "text": "Skilled in React, Node.js, MongoDB, Express and other trending technologies."
+    }
+  ],
+  "Registry Scan": [
+    {
+       "id": "reg-1",
+       "title": "Weekly Risk Assessment",
+       "type": "line",
+       "graphData": [
+          { "name": "Mon", "findings": 5 },
+          { "name": "Tue", "findings": 12 },
+          { "name": "Wed", "findings": 9 },
+          { "name": "Thu", "findings": 15 },
+          { "name": "Fri", "findings": 8 },
+          { "name": "Sat", "findings": 14 },
+          { "name": "Sun", "findings": 10 }
+       ]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 import './Nav.css';
-import { Bell, User } from "lucide-react"; // make sure lucide-react is installed
+import { Bell, User } from "lucide-react"; 
 
-const Nav = () => {
+// Receive props here
+const Nav = ({ setSearchQuery }) => {
   const handleClick = () => {
     window.location.reload(); 
   };
@@ -9,8 +10,6 @@ const Nav = () => {
   return (
     <header>
       <div className="navbar">
-
-        {/* Left: breadcrumb */}
         <div className="navbar-left">
           <span className="breadcrumb">
             Home &gt;{" "}
@@ -20,22 +19,21 @@ const Nav = () => {
           </span>
         </div>
 
-        {/* Center: search bar */}
         <div className="navbar-center">
           <input
             type="text"
             placeholder="Search Widgets..."
             className="search-bar"
+            // Update state on change
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
 
-        {/* Right: icons + username */}
         <div className="navbar-right">
           <Bell className="icon" size={20} />
           <User className="icon" size={20} />
           <span className="username">Harshal Argade</span>
         </div>
-
       </div>
     </header>
   );

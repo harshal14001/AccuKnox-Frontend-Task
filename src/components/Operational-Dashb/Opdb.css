@@ -1,213 +1,179 @@
-/* container */
+/* Opdb.css */
+
+/* Main Container */
 .opdb-main {
   background: #f3f9fc;
-  padding: 20px 28px;
+  padding: 30px 40px; /* More breathing room */
+  min-height: 100vh;
 }
 
-/* CNAPP EXE */
+/* Top Header Section (Title + Button) */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .opdb-main h2 {
   font-family: 'Inter', sans-serif;
-  font-size: larger;
-  margin-bottom: 20px;
-}
-
-/* heading */
-.cspm {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #0f172a;
-  margin-left: 10px;
-  margin-bottom: 14px;
+  margin: 0;
+}
+
+/* Styled Add Widget Button */
+.add-widget-btn {
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.add-widget-btn:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+/* Category Sections */
+.category-section {
+  margin-bottom: 40px;
+}
+
+/* Category Headings (CSPM, CWPP, Registry) */
+.category-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-left: 0; /* Aligned with grid */
+  margin-bottom: 15px;
   font-family: 'Inter', sans-serif;
 }
 
-/* grid layout - responsive cards */
+/* Grid System */
 .widget-grid {
-  margin-left: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 widgets per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  /* Removed margin-left to align perfectly with headings */
 }
 
-@media (max-width: 1100px) {
-  .widget-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  }
-}
-
-@media (max-width: 700px) {
-  .widget-grid {
-    grid-template-columns: 1fr; /* 1 per row */
-  }
-}
-
-/* card */
+/* Widget Card */
 .widget {
   background: #fff;
   border-radius: 12px;
-  padding: 18px;
-  min-height: 215px;
-  box-shadow: 0 4px 18px rgba(16,24,40,0.06);
+  padding: 20px;
+  min-height: 220px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
-/* title */
+/* Widget Header */
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
 .widget-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0b1220;
-  margin-bottom: 12px;
-  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
 }
 
-/* placeholder text */
-.widget-placeholder {
-  color: #6b7280;
-  text-align: center;
-  padding: 28px 0;
+.remove-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 4px;
 }
+.remove-btn:hover { color: #ef4444; }
 
-/* main content area (text vs charts) */
+/* Content Area */
 .widget-content {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-/* chart row - chart + legend */
+.widget-text {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Empty State Card (+ Add Widget) */
+.widget.add-widget {
+  border: 2px dashed #e2e8f0;
+  background: #f8fafc;
+  box-shadow: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-weight: 600;
+}
+.widget.add-widget:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Chart Styles */
 .chart-row {
   display: flex;
-  gap: 18px;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
-
-/* chart area with center overlay */
 .chart-area {
   position: relative;
   width: 140px;
   height: 140px;
-  flex: 0 0 140px;
 }
-
-/* center text inside donut */
 .chart-center {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.chart-total {
-  font-weight: 700;
-  font-size: 16px;
-  color: #0b1220;
+.chart-total { font-weight: 700; font-size: 16px; color: #0f172a; }
+.chart-label { font-size: 12px; color: #64748b; }
+
+.legend { list-style: none; padding: 0; margin: 0; }
+.legend li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #334155; margin-bottom: 8px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .widget-grid { grid-template-columns: repeat(2, 1fr); }
 }
-.chart-label {
-  font-size: 12px;
-  color: #6b7280;
+@media (max-width: 768px) {
+  .widget-grid { grid-template-columns: 1fr; }
+  .opdb-main { padding: 20px; }
 }
 
-/* legend */
-.legend {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.legend li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #475569;
-  margin-bottom: 8px;
-}
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* Add widget card style */
-.add-widget {
-  border: 1px dashed #d1d5db;
-  background: #fbfdff;
-  color: #475569;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-weight: 600;
-}
 /**/
-/* CWPP */
-.cwpp {
-  margin-top: 20px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  font-family: 'Inter', sans-serif;
+.widget-grid.full-width {
+  grid-template-columns: 1fr;
 }
 
-/* CWPP cards (reuse widget style) */
-.cwpp-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  min-height: 215px;
-  box-shadow: 0 4px 18px rgba(16,24,40,0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.cwpp-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0b1220;
-  margin-bottom: 12px;
-}
-
-.cwpp-text {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.6;
-}
-.cwpp-span{
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.6;
-}
-
-/* registry */
-/* Registry Scan card */
-.registry-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  min-height: 250px; /* slightly taller for charts */
-  box-shadow: 0 4px 18px rgba(16, 24, 40, 0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 20px 10px; /* spacing from CWPP grid */
-}
-
-.registry-card .cwpp-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0b1220;
-  margin-bottom: 12px;
-}
-
-.registry-card .widget-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.full-width .widget {
+  width: 100%;
 }
