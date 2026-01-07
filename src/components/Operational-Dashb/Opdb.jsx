@@ -1,7 +1,19 @@
+
 import React, { useState } from "react";
 import dataFile from "../../data/dashboardData.json";
-import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import "./Opdb.css";
+import {
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip
+} from "recharts";
 
 const Opdb = () => {
   const [widgets, setWidgets] = useState(dataFile);
@@ -109,9 +121,9 @@ const Opdb = () => {
         <div className="cwpp-card">
           <h4 className="cwpp-title">About Developer</h4>
           <p className="cwpp-text">
-            Hello! folks myself Harshal Argade and I am Full Stack Web Developer.         
-            </p>
-            <span className="cwpp-span">Contact: harshalargade.dev@gmail.com
+            Hello! folks myself Harshal Argade and I am Full Stack Web Developer.
+          </p>
+          <span className="cwpp-span">Contact: harshalargade.dev@gmail.com
           </span>
         </div>
 
@@ -128,6 +140,44 @@ const Opdb = () => {
           + Add Widget
         </div>
       </div>
+
+      {/* res sec */}
+      {/* Card 3 - Registry Scan */}
+      <h3 className="cwpp">Registry Scan</h3>
+      <div className="registry-card">
+        <h4 className="cwpp-title">Weekly Risk Assesement</h4>
+        <div className="widget-content">
+          <ResponsiveContainer width="100%" height={200}>
+            <LineChart
+              data={[
+                { name: "Mon", findings: 5 },
+                { name: "Tue", findings: 12 },
+                { name: "Wed", findings: 9 },
+                { name: "Thu", findings: 15 },
+                { name: "Fri", findings: 8 },
+                { name: "Sat", findings: 14 },
+                { name: "Sun", findings: 10 },
+              ]}
+              margin={{ top: 10, right: 20, left: -10, bottom: 0 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Line
+                type="monotone"
+                dataKey="findings"
+                stroke="#2563eb"
+                strokeWidth={2}
+                dot={{ r: 4, stroke: "#1e40af", strokeWidth: 2, fill: "#fff" }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+
+
     </section>
   );
 };
