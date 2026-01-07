@@ -36,20 +36,5 @@ Hi, I’m **Harshal Argade** 👋
 <img width="1920" height="877" alt="Image" src="https://github.com/user-attachments/assets/61461031-fe43-4339-a852-cbc4b79f5644" />
 
 
-## Project Structure
-
-src/
-├── components/
-│   ├── Navbar/
-│   │   └── Nav.jsx            # Top Navigation & Search Input
-│   ├── Operational-Dashb/
-│   │   ├── Opdb.jsx           # Main Dashboard Logic & Grid Layout
-│   │   ├── Opdb.css           # Dashboard Styling
-│   │   ├── AddWidgetDrawer.jsx # Slide-out Sidebar for managing widgets
-│   │   └── AddWidgetDrawer.css # Sidebar Styling
-├── data/
-│   └── dashboardData.json     # Single source of truth for widget data
-├── App.js                     # State container (Search Query)
-└── index.js
 
 
